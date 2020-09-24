@@ -1,7 +1,11 @@
 ### ZarinPal Blazor WebAssembly
 
-### PaymentRequest
+### install packages in Shared Project
+	Microsoft.AspNetCore.WebUtilities
+	Newtonsoft.Json
+	RestSharp
 
+### PaymentRequest
 	[HttpPost]
         [Route("PaymentRequestAsync")]
         public async Task<PaymentRequest> PaymentRequestAsync(PaymentRequest model)
@@ -47,9 +51,7 @@
             }
         }
 
-
 ### PaymentVerificationAsync
-
 	[HttpPost]
         [Route("PaymentVerificationAsync")]
         public async Task<PaymentVerification> PaymentVerificationAsync(PaymentVerification model)
