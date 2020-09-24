@@ -1,0 +1,79 @@
+﻿@page "/verify"
+@page "/verify/{OrderId}/"
+@using BlazorAppZarinPalTest.Shared.Models
+@using BlazorAppZarinPalTest.Client.Interfaces
+@using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager navigationManager
+@inject IPayment paymentService
+
+
+
+<section id="signin-page" class="p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12"><h4><strong>Authority: </strong>@Authority</h4></div>
+            <div class="col-md-12"><h4><strong>Status: </strong>@Status</h4></div>
+            <div class="col-md-12"><h4><strong>OrderId: </strong>@OrderId</h4></div>
+
+            <div class="col-md-12"><h4><strong>Result: </strong>@Message</h4></div>
+            <div class="col-md-12"><h4><strong>کد پیگیری: </strong>@Ref_id</h4></div>
+
+        </div><!--row-->
+    </div><!--container-->
+</section>
+
+@code {
+    [Parameter]
+    public string Authority { get; set; }
+    [Parameter]
+    public string Status { get; set; }
+    [Parameter]
+    public string OrderId { get; set; }
+
+
+    public string Message { get; set; }
+    public string Ref_id { get; set; }
+
+    protected override void OnInitialized()
+    {
+        var uri = navigationManager.ToAbsoluteUri(navigationManager.Uri);
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("Authority", out var auth))
+        {
+            Authority = auth.First();
+        }
+
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("Status", out var status))
+        {
+            Status = status.First();
+        }
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("OrderId", out var orderid))
+        {
+            OrderId = orderid.First();
+        }
+        StateHasChanged();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Status == null || Status.ToUpper() == "NOK" || Authority == null || Authority == "")
+        {
+            Message = "انصراف از درخواست";
+            return;
+        }
+        var result = await paymentService.PaymentVerificationAsync(new PaymentVerification()
+        {
+            authority = Authority,
+            amount = 1000,
+
+            OrderId = OrderId,
+        });
+
+        if (result.Response.Success == 1)
+        {
+            Message = result.Response.Message;
+            Ref_id = result.data.ref_id.ToString();
+        }
+    }
+
+}

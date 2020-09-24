@@ -1,0 +1,9 @@
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.deps.json
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.dll
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.pdb
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.csprojAssemblyReference.cache
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.AssemblyInfoInputs.cache
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.AssemblyInfo.cs
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.dll
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.pdb
+C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.csproj.CoreCompileInputs.cache

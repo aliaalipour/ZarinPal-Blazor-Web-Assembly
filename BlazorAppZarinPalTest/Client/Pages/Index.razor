@@ -1,0 +1,52 @@
+﻿@page "/"
+@using BlazorAppZarinPalTest.Client.Interfaces
+@using BlazorAppZarinPalTest.Shared.Models
+@inject NavigationManager navigationManager
+@inject IPayment paymentService
+
+<section dir="rtl">
+    <EditForm Model="@model" OnValidSubmit="@OnValidSubmit">
+        <DataAnnotationsValidator />
+        <div class="form-group ">
+            <InputText class="form-control" @bind-Value="@model.OrderId" placeholder="شماره سفارش" />
+        </div><!--form-group-->
+
+        <div class="form-group ">
+            <InputNumber class="form-control" @bind-Value="@model.amount" placeholder="قیمت" />
+        </div><!--form-group-->
+
+        <div class="form-group">
+            <InputText class="form-control" @bind-Value="@model.description" placeholder="توضیحات بیشتر" />
+        </div><!--form-group-->
+        <div class="form-group">
+            <button class="btn btn-info btn-block">پرداخت</button>
+        </div><!--form-group-->
+    </EditForm>
+</section>
+
+
+@code {
+
+    private PaymentRequest model;
+    protected override void OnInitialized()
+    {
+        model = new PaymentRequest()
+        {
+            OrderId = "9654823514585",
+            amount = 1000,
+            description = "Description",
+        };
+    }
+
+    private async Task<bool> OnValidSubmit()
+    {
+
+        var response = await paymentService.PaymentRequestAsync(model);
+        if (response.Response.Success == 1)
+        {
+            navigationManager.NavigateTo(response.Url);
+        }
+
+        return await Task.FromResult(true);
+    }
+}
