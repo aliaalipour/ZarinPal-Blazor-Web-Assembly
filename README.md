@@ -2,7 +2,7 @@
 
 ### PaymentRequest
 
-		[HttpPost]
+	[HttpPost]
         [Route("PaymentRequestAsync")]
         public async Task<PaymentRequest> PaymentRequestAsync(PaymentRequest model)
         {
@@ -47,9 +47,10 @@
             }
         }
 
+
 ### PaymentVerificationAsync
 
-		[HttpPost]
+	[HttpPost]
         [Route("PaymentVerificationAsync")]
         public async Task<PaymentVerification> PaymentVerificationAsync(PaymentVerification model)
         {
