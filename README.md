@@ -1,7 +1,8 @@
 ### ZarinPal Blazor WebAssembly
+
 ### PaymentRequest
 
-	    [HttpPost]
+		[HttpPost]
         [Route("PaymentRequestAsync")]
         public async Task<PaymentRequest> PaymentRequestAsync(PaymentRequest model)
         {
@@ -44,12 +45,57 @@
             {
                 return new PaymentRequest() { Response = new Response(-1, ex.Message) };
             }
-
         }
-Code Blocks (Preformatted text):
 
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
+### PaymentVerificationAsync
+
+		[HttpPost]
+        [Route("PaymentVerificationAsync")]
+        public async Task<PaymentVerification> PaymentVerificationAsync(PaymentVerification model)
+        {
+            try
+            {
+                await Task.Delay(100);
+                #region Rest Api Request
+
+                var client = new RestClient("https://api.zarinpal.com/pg/v4/payment/verify.json");
+                var request = new RestRequest(Method.POST);
+                request.AddHeader("Content-Type", "application/json");
+
+
+                PaymentVerification pv = new PaymentVerification();
+                pv.merchant_id = merchant_id;
+                pv.authority = model.authority;
+                pv.amount = Convert.ToInt32(model.amount * 10);
+
+
+                var serializedData = JsonConvert.SerializeObject(pv);
+                request.AddParameter("application/json", serializedData, ParameterType.RequestBody);
+                var response = client.Execute(request);
+                var deserializeData = JsonConvert.DeserializeObject<PaymentVerification>(response.Content);
+                if (deserializeData.data.code == 100)
+                {
+                    //_ctx ==> DatabaseContext
+
+                    // اگر پایگاه داده وجود داشته باشد باید شماره محصول را از جدول مورد نظر پیدا کنی و 
+                    //کد رهگیری را در این  قسمت  قرار بدی
+                    //   var order = await _ctx.Orders.Where(ord => ord.ID == model.orderid).FirstOrDefaultAsync();
+                    //order.CodePeygiri = deserializeData.data.ref_id.ToString();
+                    //_ctx.Orders.Update(order);
+                    //_ctx.SaveChanges() > 0
+
+                    return new PaymentVerification()
+                    {
+                        Response = new Response(1, "پرداخت با موفقیت انجام شد"),
+                        data=deserializeData.data
+                    };
+                }
+                #endregion
+                return new PaymentVerification() { Response = new Response(-1, "عملیات با موفقیت انجام نشد، دوباره تلاش کنید") };
+            }
+            catch (Exception ex)
+            {
+                return new PaymentVerification() { Response = new Response(-1, ex.Message) };
+            }
+        }
 
