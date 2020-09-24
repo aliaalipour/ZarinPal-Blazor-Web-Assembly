@@ -1,5 +1,4 @@
 ### ZarinPal Blazor WebAssembly
-ZarinPal Rest Api And Connet To Blazor WebAssembly
 
 ### install packages in Shared Project
 	Microsoft.AspNetCore.WebUtilities
