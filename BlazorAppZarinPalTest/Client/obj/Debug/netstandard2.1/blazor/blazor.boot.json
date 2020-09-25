@@ -8,7 +8,7 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
-      "BlazorAppZarinPalTest.Client.dll": "sha256-0dguaTwieUad9JHO0yglkaeT+P00jEruneAtYAi6L1Y=",
+      "BlazorAppZarinPalTest.Client.dll": "sha256-65XEbBgGXWgHpBPgzSricmbxI0482Z58nYGgRm34sd0=",
       "Newtonsoft.Json.dll": "sha256-mRd6TL4DYldo1ko9czkjEDcoiPdMPrJxz3dekwV6OOY=",
       "netstandard.dll": "sha256-\/zcPVM75OAY+joGVM8yIC1gO1SFYWP1CFERgQ8PJkfA=",
       "System.Xml.Linq.dll": "sha256-IPbQMdJxZXdk8HTlaPyXdQ6Zb82iZLphnM74yO4EURQ=",
@@ -67,7 +67,7 @@
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-dwm+rKImjhxtOmHHVpSxOgl2oh2R26xOWihLaZSv7Vs="
     },
     "pdb": {
-      "BlazorAppZarinPalTest.Client.pdb": "sha256-+sfaK9tpHyTeaD+IgBLNW4U9sNqh01wWGqrYihTx5CM=",
+      "BlazorAppZarinPalTest.Client.pdb": "sha256-IUpnmheHhD\/HvkW3594xlefMkkn+peN7bVPWfh1EMZo=",
       "BlazorAppZarinPalTest.Shared.pdb": "sha256-q+KcRGmygo9x5tIdPK9CzruUqrcFKSSCv0WWlBR9Bok="
     },
     "runtime": {

@@ -16,7 +16,7 @@ namespace BlazorAppZarinPalTest.Server.Controllers
     public class HomeController : ControllerBase
     {
         #region merchant_id
-        private string merchant_id = "merchant_id";
+        private string merchant_id = "df2efdf8-5e8f-11e8-8e99-005056a205be";
         #endregion
 
         [HttpPost]

@@ -7,3 +7,12 @@ C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Share
 C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.dll
 C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.pdb
 C:\Users\Aalipour\source\repos\BlazorAppZarinPalTest\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.deps.json
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.dll
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\bin\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.pdb
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.csprojAssemblyReference.cache
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.AssemblyInfoInputs.cache
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.AssemblyInfo.cs
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.csproj.CoreCompileInputs.cache
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.dll
+C:\Users\Aalipour\source\repos\ZarinPal-Blazor-Web-Assembly\BlazorAppZarinPalTest\Shared\obj\Debug\netstandard2.1\BlazorAppZarinPalTest.Shared.pdb
